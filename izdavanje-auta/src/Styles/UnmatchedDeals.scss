@@ -1,0 +1,24 @@
+@import "./Variables";
+
+.unmatched-deals {
+    width: 100%;
+    background-color: $black;
+    @include flexCenter(column);
+
+    h1, p {
+        text-align: center;
+        color: $light-blue;
+    }
+
+    padding: 4rem 0;
+
+    h1{
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+
+    p {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+}

@@ -1,0 +1,215 @@
+@import "./Variables";
+
+.hero {
+    width: 100%;
+    min-height: 80vh;
+
+    &-text{
+
+        h1 {
+            color: $dark-blue;
+            font-weight: 200;
+            margin: 0;
+
+            span {
+                color: $blue;
+            }
+        }
+
+        p {
+            color: $black;
+        }
+    }
+
+    .buttons {
+        margin: 0 auto;
+
+        .button-home {
+            border: none;
+            color: $white;
+            text-transform: uppercase;
+
+            &:nth-child(1) {
+                background-color: $blue;
+                &:hover {
+                    background-color: $dark-blue;
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: $black;
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                    border: 1px solid $black;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation:landscape) {
+    .krug1 {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translate(-50%, 0);
+        z-index: -1;
+    }
+    
+    .krug2 {
+        width: 30%;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .auto-home {
+        width: 50%;
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        transform: translate(-100%, 0);
+    }
+
+    .hero {
+        
+        &-text {
+            @include flexCenter(column);
+            align-items:flex-start;
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            line-height: 6rem;
+
+            h1 {
+                font-size: 4rem;
+    
+                span {
+                    font-size: 4rem;
+                }
+            }
+    
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .buttons {
+            width: 60%;
+
+            @include flexCenter(row);
+
+            .button-home {
+                font-size: 1.5rem;
+                width: 45%;
+                aspect-ratio: 3.5/1;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .hero {
+        
+            &-text {
+                line-height: 5rem;
+            }
+    
+            h1 {
+                font-size: 3rem;
+
+                span {
+                    font-size: 3rem;
+                }
+    
+            }
+    
+            p {
+                font-size: 1.5rem;
+            }
+    
+            .buttons {
+    
+                .button-home {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width: 1008px) {
+        .hero {
+        
+            &-text {
+                line-height: 4rem;
+            }
+    
+            h1 {
+                font-size: 2.5rem;
+
+                span {
+                    font-size: 2.5rem;
+                }
+    
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            .buttons {
+    
+                .button-home {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media (orientation: portrait) {
+    .hero {
+        .krug1, .krug2, .auto-home {
+            display: none;
+        }
+
+        @include flexCenter(column);
+
+        &-text {
+            text-align: center;
+            width: 80%;
+            h1 {
+                font-size: 4rem;
+                line-height: 6rem;
+
+                span {
+                    font-size: 4rem;
+                }
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 4rem;
+                margin-top: 2rem;
+            }
+
+            .buttons {
+                width: 100%;
+                @include flexCenter(column);
+
+                .button-home {
+                    font-size: 1.5rem;
+                    width: 80%;
+                    aspect-ratio: 4.5/1;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

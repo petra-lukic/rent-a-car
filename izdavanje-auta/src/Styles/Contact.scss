@@ -1,0 +1,228 @@
+@import "./Variables.scss";
+
+.contact {
+    width: 100%;
+
+    h1 {
+      color: $dark-blue;
+      margin: 0;
+    }
+
+    p {
+        color: $black;
+    }
+
+    &_form {
+
+        label {
+            color: $dark-blue;
+            span {
+                color: $blue;
+            }
+        }
+    
+        input, textarea {
+            width: 100%;
+            color: $black;
+            outline: none;
+            background-color: $white;
+        }
+    
+        textarea {
+            border-color: $dark-blue;
+        }
+    
+        input {
+            border: none;
+            border-bottom: 1px solid $dark-blue;
+        }
+
+        &_button {
+            border: none;
+            color: $white;
+            text-transform: uppercase;
+            background-color: $blue;
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .contact {
+        padding: 5rem;
+        display: flex;
+        justify-content: space-around;
+
+        &_text {
+            width: 40%;
+
+            h1 {
+                font-size: 4rem;
+                line-height: 5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 3rem;
+                margin-top: 2rem;
+            }
+        }
+
+        &_form {
+            width: 45%;
+
+            @include flexCenter(column);
+
+            &_personal-info {
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+
+            &_message {
+                width: 100%;
+            }
+
+            label {
+                font-size: 1.5rem;
+                line-height: 3rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            input {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            textarea {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            &_button {
+                width: 40%;
+                aspect-ratio: 4/1;
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    @media (max-width:1000px) {
+        .contact {
+            padding: 5rem;
+    
+            &_form {
+    
+                label {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    span {
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                input {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+    
+                textarea {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+
+                &_button {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width:800px) {
+        .contact {
+    
+            &_text {
+
+                h1 {
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }    
+    }
+}
+
+@media (orientation:portrait) {
+    .contact {
+        @include flexCenter(column);
+        padding: 5rem 0;
+
+        &_text {
+            width: 90%;
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+                line-height: 8rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 3rem;
+                margin-top: 2rem;
+            }
+        }
+
+        &_form {
+            width:90%;
+            padding-top: 5rem;
+
+            @include flexCenter(column);
+
+            &_personal-info {
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+
+            &_message {
+                width: 100%;
+            }
+
+            label {
+                font-size: 1.5rem;
+                line-height: 3rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            input {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            textarea {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            &_button {
+                width: 50%;
+                aspect-ratio: 4/1;
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+@import "./Variables.scss";
+
+.about {
+    width: 100%;
+    @include flexCenter(column);
+
+    &_text {
+        text-align: center;
+        background-image: url(../images/car-wheel.png);
+        background-repeat: repeat;
+        background-size: 5rem;
+        h1, p {
+            color: $black;
+        }
+
+        h2 {
+            color: $dark-blue;
+        }
+    }
+}
+
+@media (orientation:landscape) {
+    .about {
+        &_text {
+            padding: 3rem 5rem;
+            h1{
+                font-size: 4rem;
+                line-height: 5rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+                line-height: 5rem;
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+}
+
+@media (orientation:portrait) {
+    .about {
+        &_text {
+            padding: 3rem;
+            h1{
+                font-size: 3rem;
+                line-height: 8rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+                line-height: 8rem;
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import "./Variables.scss";
+
+.testimonials {
+    width: 100%;
+    background-color: $light-blue;
+
+    @include flexCenter(column);
+
+    h1, p {
+        color: $black;
+        text-align: center;
+    }
+    .cards {
+        &_button {
+            background-color: $light-blue;
+            color: $blue;
+            border: 2px solid $blue;
+            border-radius: 50%;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (orientation:landscape) {
+
+    .testimonials{
+
+        padding: 3rem;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+            width: 60%;
+            margin: 4rem 0;
+        }
+    }
+
+    .cards {
+        width: 100%;
+        @include flexCenter(row);
+        position: relative;
+
+        padding: 0 1rem;
+
+        &_button {
+            position: absolute;
+            width:5%;
+            aspect-ratio: 1/1;
+            font-size: 3rem;
+            top: 50%;
+            z-index: 1000;
+
+            &_go-left {
+                left: 0%;
+            }
+
+            &_go-right {
+                right: 0%;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .testimonials{
+        padding: 3rem 0;
+        h1 {
+            font-size: 4rem;
+
+        }
+
+        p {
+            font-size: 2rem;
+            width: 60%;
+            margin: 4rem 0;
+        }
+    }
+
+    .cards {
+        width: 100%;
+        @include flexCenter(row);
+        position: relative;
+
+        padding: 0 1rem;
+
+        &_button {
+            position: absolute;
+            width:15%;
+            aspect-ratio: 1/1;
+            font-size: 3rem;
+            top: 50%;
+            z-index: 1000;
+
+            &_go-left {
+                left: 0%;
+            }
+
+            &_go-right {
+                right: 0%;
+            }
+        }
+    }
+}

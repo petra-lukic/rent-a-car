@@ -1,0 +1,270 @@
+@import "./Variables.scss";
+
+.why-choose-us {
+    width: 100%;
+
+    @include flexCenter(column);
+    .cars {
+        width: 100%;
+    }
+
+    &_details {
+        h2 {
+            color: $blue;
+        }
+
+        h1 {
+            color: $dark-blue;
+        }
+
+        p {
+            color: $black;
+        }
+
+        &_left {
+
+            @include flexCenter(column);
+
+            button {
+            border: none;
+            background-color: $blue;
+            color: $white;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $dark-blue;
+            }
+            }
+        }
+
+        &_right {
+
+            @include flexCenter(column);
+
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .why-choose-us {
+
+        &_details {
+             width: 100%;
+            min-height: 100vh;
+            @include flexCenter(row);
+
+            &_left {
+                width: 40%;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h1 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+
+                button {
+                width: 30%;
+                aspect-ratio: 3.5/1;
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                }
+            }
+
+            &_right {
+                width: 40%;
+                margin: 0 auto;
+
+                &_container {
+                    width: 100%;
+                    margin: 3rem 0;
+                    @include flexCenter (row);
+
+                    &_text {
+                        width: 85%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: left;
+                        flex-direction: column;
+                    }
+
+                    h1 {
+                        font-size: 2.5rem;
+                        margin: 0;
+                    }
+
+                    p{
+                        font-size: 1.2rem;
+                    }
+
+                    img {
+                        width: 10%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:1000px) {
+        .why-choose-us {
+
+            &_details {
+    
+                &_left {
+    
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+    
+                    h1 {
+                        font-size: 3rem;
+                    }
+    
+                    p {
+                        font-size: 1.5rem;
+                    }
+    
+                    button {
+                    font-size: 1rem;
+                    }
+                }
+    
+                &_right {
+    
+                    &_container {
+    
+                        h1 {
+                            font-size: 2rem;
+                        }
+    
+                        p{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width:600px) {
+            .why-choose-us {
+
+                &_details {
+        
+                    &_left {
+        
+                        h2 {
+                            font-size: 1rem;
+                        }
+        
+                        h1 {
+                            font-size: 2rem;
+                        }
+        
+                        p {
+                            font-size: 1rem;
+                        }
+        
+                        button {
+                        font-size: 1rem;
+                        }
+                    }
+        
+                    &_right {
+        
+                        &_container {
+        
+                            h1 {
+                                font-size: 1.3rem;
+                            }
+        
+                            p{
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .why-choose-us {
+        width: 100%;
+        h1, h2, p {
+            text-align: center;
+        }
+        &_details {
+            width: 90%;
+            padding: 8rem 0;
+            @include flexCenter(column);
+
+            &_left {
+                width: 100%;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 2.5rem;
+                    line-height: 5rem;
+                }
+
+                h1 {
+                    font-size: 3rem;
+                    line-height: 6rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    line-height: 4rem;
+                }
+
+                button {
+                width: 100%;
+                aspect-ratio: 8/1;
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                }
+            }
+
+            &_right {
+                width: 100%;
+                margin: 0 auto;
+
+                &_container {
+                    width: 100%;
+                    margin-top: 8rem;
+                    @include flexCenter (column);
+
+                    &_text {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: left;
+                        flex-direction: column;
+                    }
+
+                    h1 {
+                        font-size: 3rem;
+                        line-height: 6rem;
+                        margin: 0;
+                    }
+
+                    p{
+                        font-size: 2rem;
+                        line-height: 3rem;
+                    }
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "./Variables.scss";
+
+.vehicle-models {
+    width: 100%;
+    background-image: url(../images/car-wheel.png);
+    background-repeat: repeat;
+    background-size: 5rem;
+
+    &_cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (orientation:portrait) {
+    .vehicle-models_cards {
+        margin: 5rem 0;
+    }
+}

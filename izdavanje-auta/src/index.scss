@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import "./Styles/Variables";
+
+* {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Marcellus SC', serif;
+  }
+  
+  body {
+    background-color: $white;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  
+  /*- - - - - scroll bar - - - - - */
+  
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $blue;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: $dark-blue;
+  }

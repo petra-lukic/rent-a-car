@@ -1,0 +1,86 @@
+@import "./Variables.scss";
+
+.faq-card {
+    &_question {
+        border: 1px solid $light-blue;
+        @include flexCenter(row);
+
+        h1 {
+            color: $black;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &_image {
+            display: none;
+        }
+
+        .active-image {
+            display: block;
+        }
+
+    }
+
+    .active-question {
+        background-color: $light-blue;
+    }
+
+    &_answer {
+        color: $black;
+        display: none;
+        transition: display 1s ease;
+    }
+    .active-answer {
+        display: block;
+    }
+}
+
+@media (orientation: landscape) {
+    .faq-card {
+        width:60%;
+        &_question {
+            padding: 1rem;
+
+            h1 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+            &_image {
+                width: 2rem;
+            }
+
+        }
+
+        &_answer {
+            padding: 2rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .faq-card {
+        width:90%;
+        &_question {
+            padding: 1rem;
+
+            h1 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+            &_image {
+                width: 2rem;
+            }
+
+        }
+
+        &_answer {
+            padding: 2rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+}

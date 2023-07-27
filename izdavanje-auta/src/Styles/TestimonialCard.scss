@@ -1,0 +1,169 @@
+@import "./Variables.scss";
+
+.testimonial-card {
+    background-color: $white;
+    box-shadow: 0px 10px 10px $dark-blue;
+    display: inline-flex;
+    @include flexCenter(column);
+
+    &_section1 {
+        @include flexCenter(column);
+        width: 90%;
+
+        .left{
+            align-self: flex-start;
+        }
+
+        p{
+            color: $black;
+            text-align: center;
+            width: 80%;
+            align-self: center;
+        }
+
+        .right {
+            align-self: flex-end;
+        }
+
+    }
+
+    &_section2 {
+        width: 90%;
+        @include flexCenter(row);
+
+        h1{
+            color: $black;
+        }
+
+        h2{
+            color: $black;
+        }
+
+        .profile-picture {
+            width: 30%;
+            aspect-ratio: 1/1;
+            background-size: cover;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .testimonial-card {
+        width: 30%;
+        min-height: 90vh;
+        margin: 2rem;
+        padding: 3rem;
+
+        &:nth-child(even) {
+            transform: scale(0.8);
+            filter: blur(2px);
+        }
+
+        &:nth-child(odd) {
+            transition: transform 0.3s ease-in-out
+        }
+
+        &_section1 {
+    
+            p{
+                font-size: 2rem;
+                line-height: 3rem;
+                margin: 3rem 0;
+            }
+    
+            .qmark {
+                width: 3rem;
+            }
+        }
+    
+        &_section2 {
+    
+            h1{
+                font-size: 1.5rem;
+            }
+    
+            h2{
+                font-size: 1rem;
+            }
+    
+        }
+
+    }
+
+    @media (max-width:1200px) {
+        .testimonial-card {
+            margin: 2rem;
+            padding: 3rem;
+    
+            &_section1 {
+        
+                p{
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    margin: 3rem 0;
+                }
+        
+                .qmark {
+                    width: 2rem;
+                }
+            }
+        
+            &_section2 {
+        
+                h1{
+                    font-size: 1rem;
+                }
+        
+                h2{
+                    font-size: 0.7rem;
+                }
+        
+            }
+    
+        }
+    }
+
+}
+
+@media (orientation: portrait) {
+    .testimonial-card {
+        width:90%;
+        margin: 2rem;
+        padding: 3rem;
+
+        &:nth-child(even) {
+            display: none;
+        }
+
+        &:nth-child(odd) {
+            transition: transform 0.3s ease-in-out
+        }
+
+        &_section1 {
+    
+            p {
+                font-size: 2rem;
+                line-height: 3rem;
+                margin: 3rem 0;
+            }
+    
+            .qmark {
+                width: 3rem;
+            }
+        }
+    
+        &_section2 {
+    
+            h1{
+                font-size: 1.5rem;
+            }
+    
+            h2{
+                font-size: 1rem;
+            }
+    
+        }
+
+    }
+}

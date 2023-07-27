@@ -1,0 +1,35 @@
+@import "./Variables.scss";
+
+.cars-bg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/cars-for-pages.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    h1 {
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+
+@media (orientation:landscape) {
+    .cars-bg {
+        height: 50vh;
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .cars-bg {
+        height: 20vh;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}

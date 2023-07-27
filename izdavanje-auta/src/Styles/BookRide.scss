@@ -1,0 +1,331 @@
+@import "./Variables";
+
+.book-ride {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    background-color: $white;
+    box-shadow: 0 10px 10px 0 $black;
+
+    @include flexCenter(column);
+
+    h1, input, select, label {
+        color: $black
+    }
+
+    label {
+        display: block;
+    }
+
+    span {
+        color: $blue;
+        font-weight: bold;
+    }
+
+    form {
+        @include flexCenter(column);
+        width: 100%;
+    }
+
+    .car-image-table {
+        &_table {
+            .price {
+                background-color: $light-blue;
+                h1, p {
+                    color: $black;
+                }
+            }
+    
+            th, td {
+                color: $black;
+                text-align: center;
+                border: 1px solid $black;
+            }
+    
+            th {
+                font-weight: 400;
+                background-color: $light-blue;
+            }
+        }
+    }
+
+    .book-button {
+        border: none;
+        color: $white;
+        text-transform: uppercase;
+        background-color: $blue;
+        &:hover {
+            background-color: $dark-blue;
+        }
+
+    }
+
+}
+
+@media (orientation:landscape) {
+
+    .book-ride {
+
+        h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+        }
+
+        .book {
+
+            width: 90%;
+            @include flexCenter(row);
+
+            &_info {
+                width: 50%;
+            }
+        }
+
+        .info-container {
+            width: 100%;
+
+            label {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            input, select {
+                display: block;
+                width: 90%;
+                font-size: 2rem;
+            }
+
+            input {
+                line-height: 3rem;
+            }
+
+            select {
+                padding: 0.5rem 0;
+            }
+
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        .car-image-table {
+            width: 45%;
+            height: 100%;
+
+            @include flexCenter(column);
+
+            &_image {
+                width: 100%;
+            }
+
+            &_table {
+                width: 100%;
+
+                @include flexCenter(row);
+
+                .price {
+                    min-width: 20%;
+                    @include flexCenter(column);
+
+                    h1 {
+                        font-size: 2rem;
+                        line-height: 4rem;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 3rem;
+                        text-transform: uppercase;
+                    }
+                }
+
+                table {
+                    width: 70%;
+                    font-size: 3rem;
+                    line-height: 3.2rem;
+                    border-collapse: collapse;
+                }
+
+            }
+        }
+
+        .personal-info {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .book-button {
+            width: 30%;
+            aspect-ratio: 6/1;
+            font-size: 1.5rem;
+            margin: 3rem 0;
+        }
+
+    }
+
+
+    @media (max-width: 1200px) {
+
+            .book-ride {
+        
+                h1 {
+                font-size: 3rem;
+                }
+        
+        
+                .info-container {
+        
+                    label {
+                        font-size: 1rem;
+                        margin-top: 1.5rem;
+                        margin-bottom: 0.5rem;
+                    }
+        
+                    input {
+                        font-size: 1.5rem;
+                        line-height: 2,5rem;
+                    }
+
+                    select {
+                        padding: 0.5rem 0;
+                    }
+        
+                    span {
+                        font-size: 1.5rem;
+                    }
+                }
+        
+                .car-image-table {
+        
+                    &_table {
+        
+                        .price {
+
+                            h1 {
+                                font-size: 1.5rem;
+                                line-height: 3rem;
+                            }
+        
+                            p {
+                                font-size: 1rem;
+                                line-height: 2rem;
+                            }
+                        }
+        
+                        table {
+                            font-size: 2rem;
+                            line-height: 2.2rem;
+                        }
+        
+                    }
+                }
+            }
+        }
+}
+
+@media (orientation: portrait) {
+    .book-ride {
+
+        h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+        text-align: center;
+        }
+
+        .book {
+            width: 90%;
+            @include flexCenter(column);
+
+            &_info {
+                width: 100%;
+            }
+        }
+
+        .info-container {
+            width: 100%;
+
+            label {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            input, select {
+                display: block;
+                width: 100%;
+                font-size: 2rem;
+            }
+
+            input {
+                line-height: 3rem;
+            }
+
+            select {
+                padding: 0.5rem 0;
+            }
+
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        .car-image-table {
+            width: 100%;
+
+            @include flexCenter(column);
+
+            &_image {
+                width: 100%;
+                margin: 2rem 0;
+            }
+
+            &_table {
+                width: 100%;
+
+                @include flexCenter(row);
+
+                .price {
+                    min-width: 20%;
+                    max-width: 30%;
+                    @include flexCenter(column);
+
+                    h1 {
+                        font-size: 2rem;
+                        line-height: 4rem;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 3rem;
+                        text-transform: uppercase;
+                    }
+                }
+
+                table {
+                    width: 70%;
+                    font-size: 3rem;
+                    line-height: 3.2rem;
+                    border-collapse: collapse;
+                }
+
+            }
+        }
+
+        .personal-info {
+            width: 90%;
+            @include flexCenter(column);
+        }
+
+        .book-button {
+            width: 70%;
+            aspect-ratio: 5/1;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+
+    }
+}

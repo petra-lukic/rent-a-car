@@ -1,0 +1,166 @@
+@import "./Variables.scss";
+
+footer {
+    width: 100%;
+    background-color: $light-blue;
+
+    .footer_container {
+        @include flexCenter(column);
+
+        h1 {
+            color: $dark-blue;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: $black;
+            font-weight: 400;
+        }
+
+        p {
+            color: $black;
+            span {
+                color: $blue;
+            }
+        }
+
+        &_contact{
+            @include flexCenter(row);
+            margin-top: 5rem;
+            img {
+                width: 10%;
+            }
+            p {
+                width: 85%;
+                color: $black;
+            }
+        }
+    }
+}
+
+@media (orientation:landscape) {
+    footer {
+        min-height: 50vh;
+        padding-top: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+
+        .footer_container {
+            width: 20%;
+
+            h1 {
+                font-size: 2.5rem;
+                line-height: 4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                text-align: justify;
+                span{
+                    font-size: 2rem;
+                }
+            }
+
+            &_contact{
+                margin-top: 5rem;
+            }
+        }
+    }
+
+    @media (max-width:1200px) {
+        footer {
+
+            .footer_container {
+    
+                h1 {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                }
+    
+                h2 {
+                    font-size: 1.5rem;
+                }
+    
+                p {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                &_contact{
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width:900px) {
+        footer {
+
+            .footer_container {
+    
+                h1 {
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                }
+    
+                h2 {
+                    font-size: 1rem;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+    
+                &_contact{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    footer {
+        @include flexCenter(column);
+
+        .footer_container {
+            width: 90%;
+            margin: 3rem 0;
+
+            h1 {
+                font-size: 2.5rem;
+                line-height: 8rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 3rem;
+                text-align: center;
+                span{
+                    font-size: 2rem;
+                }
+            }
+
+            &_contact{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
